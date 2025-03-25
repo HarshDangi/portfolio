@@ -24,9 +24,10 @@ export default function WorkExperience() {
                         company: card.company,
                         desc: card.desc,
                         date: card.date,
-                        companylogo: card.companylogo,
+                        companylogo: isDark ? (card.companylogoDark || card.companylogo) : card.companylogo,
                         role: card.role,
-                        descBullets: card.descBullets
+                        descBullets: card.descBullets,
+                        logoStyle: card.logoStyle
                       }}
                     />
                   );

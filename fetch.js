@@ -1,6 +1,6 @@
-fs = require("fs");
+const fs = require("fs");
 const https = require("https");
-process = require("process");
+const process = require("process");
 require("dotenv").config();
 
 const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
@@ -56,6 +56,7 @@ if (USE_GITHUB_DATA === "true") {
 }
 `
   });
+  console.log(data);
   const default_options = {
     hostname: "api.github.com",
     path: "/graphql",
@@ -79,6 +80,7 @@ if (USE_GITHUB_DATA === "true") {
       data += d;
     });
     res.on("end", () => {
+      console.log(data);
       fs.writeFile("./public/profile.json", data, function (err) {
         if (err) return console.log(err);
         console.log("saved file to public/profile.json");
@@ -92,6 +94,7 @@ if (USE_GITHUB_DATA === "true") {
 
   req.write(data);
   req.end();
+  console.log("----------\n");
 }
 
 if (MEDIUM_USERNAME !== undefined) {
@@ -108,7 +111,7 @@ if (MEDIUM_USERNAME !== undefined) {
 
     console.log(`statusCode: ${res.statusCode}`);
     if (res.statusCode !== 200) {
-      throw new Error(ERR.requestMediumFailed);
+      throw new Error(ERR.requestFailedMedium);
     }
 
     res.on("data", d => {
@@ -127,4 +130,5 @@ if (MEDIUM_USERNAME !== undefined) {
   });
 
   req.end();
+  console.log("----------\n");
 }
