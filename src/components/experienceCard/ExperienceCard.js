@@ -44,7 +44,10 @@ export default function ExperienceCard({cardInfo, isDark}) {
           className="experience-roundedimg"
           src={cardInfo.companylogo}
           alt={cardInfo.company}
-          style={{"background": isDark ? "black" : "white", ...cardInfo.logoStyle}}
+          style={{
+            background: isDark ? "black" : "white",
+            ...cardInfo.logoStyle
+          }}
           onLoad={() => getColorArrays()}
         />
       </div>

@@ -7,8 +7,6 @@ import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your
 import vwoLogoLight from "./assets/images/vwo-logo-color.svg";
 import vwoLogoDark from "./assets/images/vwo-logo-white.svg";
 
-
-
 // Splash Screen
 
 const splashScreen = {
@@ -29,8 +27,7 @@ const greeting = {
   subTitle: emoji(
     "A passionate Full Stack Software Developer 🚀 having an experience of building Web applications with JavaScript / Reactjs / Nodejs and some other cool libraries and frameworks."
   ),
-  resumeLink:
-    "", // Set to empty to hide the button
+  resumeLink: "", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -146,7 +143,9 @@ const educationInfo = {
       subHeader: "Bachelor of Technology in Computer Science and Engineering",
       duration: "September 2016 - August 2020",
       desc: "CGPA: 8.71",
-      descBullets: ["Subjects: Operating Systems, Computer Networks, Database Managment Systems, Finite Automata, Discrete Mathematics"]
+      descBullets: [
+        "Subjects: Operating Systems, Computer Networks, Database Managment Systems, Finite Automata, Discrete Mathematics"
+      ]
     }
   ]
 };
