@@ -6,6 +6,8 @@
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
   border-radius: 10px;
   border: 1px solid $lightBorder1;
+  display: flex;
+  flex-direction: column;
 }
 
 .experience-card-dark {
@@ -14,13 +16,19 @@
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
   border-radius: 10px;
   border: 1px solid $lightBorder1;
+  display: flex;
+  flex-direction: column;
 }
 
 .experience-card:hover {
   box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
 }
 
+.experience-header {
+  height: 11rem;
+}
 .experience-banner {
+  @extend .experience-header;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 150%;
@@ -31,13 +39,13 @@
   -o-filter: blur(0px);
   -ms-filter: blur(0px);
   filter: blur(0px);
-  height: 11rem;
   display: flex;
   align-items: flex-end;
   justify-content: center;
 }
 
 .experience-blurred_div {
+  @extend .experience-header;
   position: absolute;
   background: $experienceCardBlurredDivLG;
   -webkit-filter: blur(5px);
@@ -45,7 +53,6 @@
   -o-filter: blur(5px);
   -ms-filter: blur(5px);
   filter: blur(5px);
-  height: 11rem;
   top: 0;
   left: 0;
   width: 100%;
@@ -64,6 +71,54 @@
   justify-content: center;
 }
 
+.experience-header-back {
+  height: 6rem;
+}
+
+.experience-banner-back {
+  @extend .experience-header-back;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background: $experienceCardBannerLG;
+  border-radius: 10px 10px 0px 0px;
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  -ms-filter: blur(0px);
+  filter: blur(0px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.experience-blurred_div-back {
+  @extend .experience-header-back;
+  position: absolute;
+  background: $experienceCardBlurredDivLG;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.experience-div-company-back {
+  @extend .experience-header-back;
+  position: absolute;
+  background: transparent;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .experience-text-company {
   text-align: center;
   padding: 1.5rem;
@@ -72,9 +127,9 @@
   font-size: 25px;
   text-align: center;
   font-weight: 700;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+  // text-overflow: ellipsis;
+  // overflow: hidden;
+  // white-space: nowrap;
 }
 
 .experience-roundedimg {
@@ -119,6 +174,12 @@
 .experience-text-details {
   padding: 1.5rem;
   margin-top: 2rem;
+  flex-grow: 1;
+}
+
+.experience-skills-details {
+  padding: 0 1.5rem 0 1.5rem;
+  height: 5em;
 }
 
 /* Media Query */

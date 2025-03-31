@@ -6,6 +6,7 @@ import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
 import vwoLogoLight from "./assets/images/vwo-logo-color.svg";
 import vwoLogoDark from "./assets/images/vwo-logo-white.svg";
+import databaseLottie from "./assets/lottie/database.json";
 
 // Splash Screen
 
@@ -47,6 +48,17 @@ const socialMediaLinks = {
 };
 
 // Skills Section
+const skills = {
+  js: "JavaScript",
+  ts: "Typescript",
+  python: "Python",
+  java: "Java",
+  react: "React.js",
+  node: "Node.js",
+  cloud: "GCP/AWS",
+  scikit: "scikit-learn",
+  matplot: "matplolib"
+};
 
 const skillsSection = {
   title: "What I do",
@@ -89,10 +101,10 @@ https://fontawesome.com/icons?d=gallery */
       skillName: "nodejs",
       fontAwesomeClassname: "fab fa-node"
     },
-    {
-      skillName: "swift",
-      fontAwesomeClassname: "fab fa-swift"
-    },
+    // {
+    //   skillName: "swift",
+    //   fontAwesomeClassname: "fab fa-swift"
+    // },
     {
       skillName: "npm",
       fontAwesomeClassname: "fab fa-npm"
@@ -105,10 +117,10 @@ https://fontawesome.com/icons?d=gallery */
       skillName: "aws",
       fontAwesomeClassname: "fab fa-aws"
     },
-    {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
-    },
+    // {
+    //   skillName: "firebase",
+    //   fontAwesomeClassname: "fas fa-fire"
+    // },
     {
       skillName: "python",
       fontAwesomeClassname: "fab fa-python"
@@ -117,6 +129,10 @@ https://fontawesome.com/icons?d=gallery */
       skillName: "docker",
       fontAwesomeClassname: "fab fa-docker"
     }
+    // {
+    //   skillName: "kubernetes",
+    //   fontAwesomeClassname: "fab fa-dharmachakra"
+    // }
   ],
   display: true // Set false to hide this section, defaults to true
 };
@@ -182,11 +198,13 @@ const workExperiences = {
       companylogoDark: vwoLogoDark,
       logoStyle: {objectFit: "contain"},
       date: "November 2020 – August 2023",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      desc: "Teams: Visual Website Editor, Campaign Application library, DaCDN",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
+        "Re-invented the core library with Web Workers and Event-Architecture",
+        "Dvelopment of no-code website editor",
+        "Held ownership of VWO's Chrome Extension"
+      ],
+      skills: [skills.ts, skills.js, skills.node, skills.cloud]
     },
     {
       role: "Software Developer - Intern",
@@ -195,21 +213,34 @@ const workExperiences = {
       companylogoDark: vwoLogoDark,
       logoStyle: {objectFit: "contain"},
       date: "Jan 2020 – March 2021",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      desc: "Team: Visual Website Editor",
+      descBullets: [
+        "Responsible for Development for Widgets playground - a codepen style playground.",
+        "Created a Web Crawler for statistical collection with Node.js and Puppeteer."
+      ],
+      skills: [skills.ts, skills.js, skills.node, skills.cloud]
     },
     {
       role: "Intern",
       company: "National Informatics Centre",
       companylogo: require("./assets/images/NICLogoSq.png"),
       date: "May 2019 – July 2019",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      desc: "Role: Data analysis using machine learning",
+      descBullets: [
+        "Wrote a Python script that leveraged Multivariate Analysis for a comprehensive route risk analysis."
+      ],
+      skills: [skills.python, skills.matplot, skills.scikit]
     },
     {
       role: "Intern",
       company: "Defence Research and Development Organisation, India",
       companylogo: require("./assets/images/drdo_logo.png"),
       date: "June 2018 – July 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      desc: "Optimal location for Military bases.",
+      descBullets: [
+        "Wrote a Python script that employed K-Means algorithms to devise optimal locations for military bases"
+      ],
+      skills: [skills.python, skills.matplot, skills.scikit]
     }
   ]
 };
@@ -226,29 +257,49 @@ const openSource = {
 
 const bigProjects = {
   title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  subtitle: null,
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: {
+        src: require("./assets/images/dynamic-pricing.gif"),
+        style: {
+          // height: "auto",
+          // maxWidth: "100%",
+          // width: "70%"
+          height: "100%"
+        }
+      },
+      projectName: "Efficient Multi-Stream Machine Learning on Apache Flink",
+      projectDesc:
+        "In streaming scenarios, reduced the number of (re)computations and intermediate payload size that is required to generate the dataset to train survervised regression model.",
+      back: {
+        heading: "Abstract:",
+        content:
+          "Across numerous sectors, a pressing demand has risen for real-time machine learning model training, a pivotal requirement for swift decision-making. Extensive research has been conducted to address challenges such as concept drift, class imbalance, and other pertinent issues. A critical challenge within this domain is the effective joining of the pipeline with streams containing correlated data, which enriches the dataset with more correlations and thereby enables algorithms to learn better Multivariate Linear Regression models. However, the computational cost associated with join and aggregation operations presents a significant obstacle, rendering real-time learning difficult to achieve. This project seeks to optimize training times for incremental learning within data pipelines by utilizing the ideas of the Factorized incremental view maintenance (F-IVM) framework to function within distributed and multi-threaded environments provided by Apache Flink. By leveraging the factorization capabilities inherent in the F-IVM framework, the project aims to substantially reduce computational overhead, thereby advancing the feasibility of real-time machine learning."
+      },
       footerLink: [
         {
-          name: "Visit Website",
-          url: "http://saayahealth.com/"
+          name: "View the paper",
+          url: "/portfolio"
         }
         //  you can add extra buttons here.
       ]
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://nextu.se/"
+      image: {
+        src: null,
+        lottie: databaseLottie,
+        style: {
+          width: "250px"
         }
+      },
+      projectName: "Database Management System with Query Optimisation",
+      projectDesc: null,
+      footerLink: [
+        // {
+        //   name: "Visit Website",
+        //   url: "http://nextu.se/"
+        // }
       ]
     }
   ],

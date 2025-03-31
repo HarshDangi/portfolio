@@ -1,0 +1,4 @@
+<svg width="60" height="60">
+  <circle stroke="currentColor" stroke-width="2" fill="transparent" r="28" cx="30" cy="30"></circle>
+  <circle class="text-primary" stroke="currentColor" stroke-width="2" fill="transparent" r="28" cx="30" cy="30" style="stroke-dasharray: 175.929; stroke-dashoffset: 175.92918860102841; transform: rotate(-90deg);" transform-origin="30px 30px"></circle>
+</svg>

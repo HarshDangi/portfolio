@@ -29,7 +29,8 @@ export default function WorkExperience() {
                           : card.companylogo,
                         role: card.role,
                         descBullets: card.descBullets,
-                        logoStyle: card.logoStyle
+                        logoStyle: card.logoStyle,
+                        skills: card.skills
                       }}
                     />
                   );
