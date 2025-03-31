@@ -280,7 +280,7 @@ const bigProjects = {
       footerLink: [
         {
           name: "View the paper",
-          url: "/portfolio"
+          url: "https://harsh-dangi-aws-portfolio.s3.us-east-1.amazonaws.com/Dissertation.pdf"
         }
         //  you can add extra buttons here.
       ]
