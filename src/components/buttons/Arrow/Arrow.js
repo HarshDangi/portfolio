@@ -16,10 +16,7 @@ export function Arrow({
   const timeOutRef = React.useRef();
   const maxStroke = 175.92918860102841;
 
-  const onMouseOver = e => {
-    if (!circleRef.current) {
-      console.log(dirc, "over");
-    }
+  const onPointerEnter = e => {
     if (timeOutRef.current) {
       clearTimeout(timeOutRef.current);
       timeOutRef.current = null;
@@ -39,10 +36,7 @@ export function Arrow({
     };
     timeOutRef.current = setTimeout(decr);
   };
-  const onMouseOut = () => {
-    if (!circleRef.current) {
-      console.log(dirc, "out");
-    }
+  const onPointerLeave = () => {
     if (timeOutRef.current) {
       clearTimeout(timeOutRef.current);
       timeOutRef.current = null;
@@ -72,8 +66,8 @@ export function Arrow({
     <div style={{alignItems: "center"}}>
       <div
         onClick={onClick}
-        onMouseEnter={onMouseOver}
-        onMouseLeave={onMouseOut}
+        onPointerEnter={onPointerEnter}
+        onPointerLeave={onPointerLeave}
         className="relative inline-flex h-14 w-14 flex-none items-center justify-center p-1"
         style={{
           position: "relative",
