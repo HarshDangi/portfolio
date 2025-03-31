@@ -45,14 +45,14 @@ function ExperienceCardFront({
 }) {
   return (
     <div className={isDark ? "experience-card-dark" : "experience-card"}>
-      <div style={{background: rgb(colorArrays)}} className="experience-banner">
         <a
           href="/"
           style={{
             position: "absolute",
-            left: "84%",
-            top: "2%",
+            right: "0.4rem",
+            top: "0.4rem",
             zIndex: 1,
+            float: "right",
             color: "white"
           }}
           onClick={onClick}
@@ -67,6 +67,7 @@ function ExperienceCardFront({
             }}
           />
         </a>
+      <div style={{background: rgb(colorArrays)}} className="experience-banner">
         <div className="experience-blurred_div"></div>
         <div className="experience-div-company">
           <h5 className="experience-text-company">{cardInfo.company}</h5>
@@ -147,8 +148,8 @@ function ExperienceCardBack({
           href="/"
           style={{
             position: "absolute",
-            left: "84%",
-            top: "2%",
+            right: "0.4rem",
+            top: "0.4rem",
             zIndex: 1,
             color: "white"
           }}
