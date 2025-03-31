@@ -24,9 +24,9 @@ export function Arrow({
       clearTimeout(timeOutRef.current);
       timeOutRef.current = null;
     }
-    let prev = +circleRef.current.style.strokeDashoffset;
+    let prev = +circleRef.current.getAttribute("stroke-dashoffset");
     const decr = () => {
-      circleRef.current.style.strokeDashoffset = prev;
+      circleRef.current.setAttribute("stroke-dashoffset", prev);
       if (prev > 0) {
         prev -= 10;
         if (prev < 0) {
@@ -38,7 +38,6 @@ export function Arrow({
       }
     };
     timeOutRef.current = setTimeout(decr);
-    circleRef.current.style.strokeDashoffset = 175.92918860102841;
   };
   const onMouseOut = () => {
     if (!circleRef.current) {
@@ -48,9 +47,9 @@ export function Arrow({
       clearTimeout(timeOutRef.current);
       timeOutRef.current = null;
     }
-    let prev = +circleRef.current.style.strokeDashoffset;
+    let prev = +circleRef.current.getAttribute("stroke-dashoffset");
     const incr = () => {
-      circleRef.current.style.strokeDashoffset = prev;
+      circleRef.current.setAttribute("stroke-dashoffset", prev);
       if (prev < maxStroke) {
         prev += 10;
         if (prev > maxStroke) {
@@ -113,8 +112,8 @@ export function Arrow({
                 color: transisitionColor,
                 strokeDasharray: "175.929, 175.929",
                 transform: "rotate(-90deg)",
-                strokeDashoffset: "175.92918860102841"
               }}
+              strokeDashoffset="175.92918860102841"
               transform-origin="30px 30px"
             ></circle>
           </svg>
