@@ -105,7 +105,7 @@ export function Arrow({
               style={{
                 color: transisitionColor,
                 strokeDasharray: "175.929, 175.929",
-                transform: "rotate(-90deg)",
+                transform: "rotate(-90deg)"
               }}
               strokeDashoffset="175.92918860102841"
               transform-origin="30px 30px"

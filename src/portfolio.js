@@ -26,7 +26,7 @@ const greeting = {
   username: "Harsh",
   title: "Hi all, I'm Harsh",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web applications with JavaScript / Reactjs / Nodejs and some other cool libraries and frameworks."
+    "I'm a Software Developer with experience in Full Stack Development and a strong interest in Distributed Systems. I build web applications using JavaScript, React, and Node.js, alongside various libraries and frameworks. In distributed computing, I have hands-on experience with Java, Apache Flink, Kafka, and Spark, and I'm currently exploring Go."
   ),
   resumeLink: "", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true

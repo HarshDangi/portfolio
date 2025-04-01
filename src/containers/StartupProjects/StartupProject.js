@@ -44,7 +44,7 @@ function ProjectFront({project, onClick = () => {}}) {
             color: isDark ? "white" : "black"
           }}
           onClick={onClick}
-          >
+        >
           <Arrow
             dirc="right"
             style={{
@@ -111,7 +111,7 @@ function ProjectBack({project, onClick = () => {}}) {
       <a
         href="/"
         style={{
-          position: "absolute", 
+          position: "absolute",
           right: "0.4rem",
           top: "0.4rem",
           zIndex: 1

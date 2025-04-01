@@ -45,28 +45,28 @@ function ExperienceCardFront({
 }) {
   return (
     <div className={isDark ? "experience-card-dark" : "experience-card"}>
-        <a
-          href="/"
+      <a
+        href="/"
+        style={{
+          position: "absolute",
+          right: "0.4rem",
+          top: "0.4rem",
+          zIndex: 1,
+          float: "right",
+          color: "white"
+        }}
+        onClick={onClick}
+      >
+        <Arrow
+          dirc="right"
           style={{
-            position: "absolute",
-            right: "0.4rem",
-            top: "0.4rem",
-            zIndex: 1,
-            float: "right",
-            color: "white"
+            color: rgba(
+              colorArrays?.length ? colorArrays : [255, 255, 255],
+              colorArrays?.length ? 0.9 : 0.4
+            )
           }}
-          onClick={onClick}
-        >
-          <Arrow
-            dirc="right"
-            style={{
-              color: rgba(
-                colorArrays?.length ? colorArrays : [255, 255, 255],
-                colorArrays?.length ? 0.9 : 0.4
-              )
-            }}
-          />
-        </a>
+        />
+      </a>
       <div style={{background: rgb(colorArrays)}} className="experience-banner">
         <div className="experience-blurred_div"></div>
         <div className="experience-div-company">
